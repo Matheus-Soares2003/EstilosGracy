@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html lang="pt-Br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro-Corte&Cores</title>
+        <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="cadastro.css">
+    </head>
+
+    <body class="body1">
+        <!-- Seção da Página de Cadastro -->
+        <div class="paginaCadastro">
+            
+            <!-- Título principal da página -->
+            <h1 class="titulo1">Cadastre-se e transforme seu visual conosco!</h1>
+            
+            <!-- Container de Imagens -->
+            <div class="container">
+                <img src="animaçao3.svg" class="cad-img" alt="Animação">
+                <img src="animaçao2.svg" class="cad-img1" alt="Animação">
+            </div>
+            
+            <!-- Formulário de Cadastro -->
+            <form method="post" class="FormCadastro">
+                <h1 class="cor-cadastro">Cadastre-se</h1>
+                
+                <label for="name">Nome Completo</label>
+                <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+                
+                <label for="phone">Telefone (opcional)</label>
+                <input type="number" id="phone" name="phone" placeholder="Ex:11987654321">
+                
+                <label for="email">E-mail</label>
+                <input type="email" placeholder="Digite seu e-mail" required>
+                
+                <label for="password">Senha</label>
+                <input type="password" placeholder="Digite sua senha" required>
+                
+                <label for="password">Confirme a Senha</label>
+                <input type="password" placeholder="Confirme sua senha" required>
+                
+                <input type="submit" value="Cadastrar" class="btn">
+            </form>
+        </div>
+    </body>
+</html>

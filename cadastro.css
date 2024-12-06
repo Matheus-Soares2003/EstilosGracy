@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Estilos Gerais */
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin-top: 20%;
+    padding: 0;
+    background-color: #2f2841;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Título da página */
+.titulo1 {
+    margin-top: -140px;
+    color: #8725f7;
+    font-size: 40px;
+    white-space: nowrap;
+    
+}
+
+/* Container de Imagens */
+.container {
+    display: flex;
+    justify-content: space-between; /* Distribui as imagens nos lados opostos */
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%;
+}
+
+.cad-img, .cad-img1 {
+    width: 25vw;
+    user-select: none;
+}
+
+.cad-img {
+    margin-left: -420px; /* posição da 1 imagem */
+    margin-top: 40px;
+}
+
+.cad-img1 {
+    margin-right: -420px; /* posição da 2 imagem */
+    margin-top: 40px;
+}
+
+/* Estilos da Página de Cadastro */
+.paginaCadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin-left: 2%;
+    margin-top: -150px;
+}
+
+/* Estilos do Formulário de Cadastro */
+.FormCadastro {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 5% 18%;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    gap: 5px;
+    margin-top: -420px;
+    width: 60%;
+    margin-left: -10px;
+    
+    
+}
+
+.cor-cadastro {
+    user-select: none;
+    color: #8725f7;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.FormCadastro h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.FormCadastro p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Estilos dos Inputs */
+.FormCadastro input {
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: all 160ms linear;
+    outline: none;
+}
+
+.FormCadastro input:focus {
+    border: 1px solid #8725f7;
+}
+
+.FormCadastro label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.FormCadastro a {
+    font-size: 13px;
+    color: #480ca8;
+    transition: all 160ms linear;
+}
+
+.FormCadastro a:hover {
+    color: #240358;
+}
+
+/* Botão de Cadastro */
+.btn {
+    background-color: #8725f7;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all 160ms linear;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0px 10px 40px -12px #530ea3;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #5b05bd;
+}
+ 
+/* Adaptando para tablet */
+@media (min-width: 481px) and (max-width: 1300px){
+    
+    .titulo1{
+        display:none;
+    }
+
+    .cad-img1{
+        display:none;
+    }
+    .cad-img{
+        margin-top: -10px;
+        margin-left: 10px;
+        width: 50vw;
+    }
+
+    .FormCadastro{
+        margin-top: 10px;
+        width: 55vw;
+        margin-left: -15px;
+    }
+}
+
+/* Adaptando para celulares */
+@media (max-width: 480px){
+    .titulo1{
+        display:none;
+    }
+
+    .cad-img1{
+        display:none;
+    }
+    .cad-img{
+        margin-top: 30px;
+        margin-left: -15px;
+        width: 80vw;
+    }
+    
+    .FormCadastro{
+        margin-top: -10px;
+        width: 100%;
+        margin-left: -15px;
+    }
+    .FormCadastro h1{
+        font-size: 1.5em;
+    }
+    .FormCadastro input{
+        font-size: 12px;
+    }
+    .paginaCadastro{
+        width: 65%;
+        margin-left: 15px;;
+        margin-top: -120px;
+    }
+}

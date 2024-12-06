@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(246, 225, 247);
+}
+
+header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-left: 20px;
+    padding-top: 20px;
+    background-color: rgb(221, 210, 210);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.192);
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    color: rgb(94, 28, 155);
+}
+
+main {
+    width: 80vw;
+    height: 95vh;
+    border-radius: 16px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.123);
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin: auto;
+}
+
+section {
+    width: 100%;
+    display: flex;
+}
+
+table {
+    margin-top: 20px;
+    margin-left: 20px;
+    max-height: 10%;
+    width: 1200px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+tr {
+    background-color: rgb(221, 210, 210);
+    text-align: center;
+}
+
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+    background-color: lightgray;
+}
+
+thead, tfoot {
+    background-color: rgb(134, 4, 160);
+    color: white;
+}
+
+thead > tr > th {
+    position: sticky;
+    top: -1px;
+    background-color: rgb(134, 4, 160);
+}
+
+button {
+    width: 120px;
+    border-radius: 40px;
+    padding: 10px;
+    gap: 10px;
+    background-color: rgb(143, 5, 148);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    color: white;
+    cursor: pointer;  
+}

@@ -1,0 +1,703 @@
+body{
+  margin:0;
+  padding:0;
+  color: #242424;
+  font-family: sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+/*BOTÃO HAMBURGUER */
+.burguer {
+  display: none;
+  width: 30px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+/* Estilo das linhas */
+.burguer::before, .burguer::after {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: black;
+  margin-top: 5px;
+  position: absolute;
+  left: 0;
+}
+/* Linha do meio */
+.burguer::before {
+  top: 0;
+}
+/* Linha inferior */
+.burguer::after {
+  bottom: 0;
+}
+/* Linha superior */
+.burguer {
+  border-top: 3.2px solid black;
+}
+
+.nav-list{
+  position: absolute; /* Fica acima da imagem de fundo */
+  top: 0; 
+  left: 0;
+  width: 95%; /* Ocupa a largura total da tela */
+  display: flex;
+  justify-content: space-between; /* Espaça os itens para as extremidades */
+  align-items: center;
+  padding: 10px 20px; /* Ajuste de espaço interno */
+  z-index: 1000; /* Certifica-se de que está acima de outros elementos */
+}
+
+.nav-left{
+    margin-left: 290px;
+}
+
+.nav-left, .nav-right{
+    display: flex;
+    gap: 30px;   
+}
+
+.log-botao button{
+    margin-left: 80px;
+}
+ 
+/* Estilo do botão */
+.Log {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #b49ef1; /* Cor inicial do botão */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transição suave para animação */
+    
+    
+}
+
+/* Efeito ao passar o mouse */
+.Log:hover {
+    background-color: #a186e8; /* Cor ao passar o mouse */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+    transform: translateY(-5px); /* Levanta o botão */
+} 
+/*Animação dos btn*/
+.btn{
+    color:black;
+    text-decoration: none;
+    font-size: 20px;
+    border: none;
+    background: none;
+    font-family: sans-serif;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 550;
+
+}
+
+.btn::before, .btn::after {
+    content: '';
+    width: 0%;
+    height: 2.1px;
+    background: blueviolet;
+    display: block;
+    transition: 0.5s;
+}
+
+.btn:hover::after, .btn:hover::before {
+    width: 100%;
+}
+
+.btn:hover {
+    color: black;
+}
+
+.logo {
+    margin: 0 50px; /* Espaçamento ao redor do logotipo */
+}
+
+.logo img {
+    width: 120px; /* tamanho da img */
+    user-select: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: 900;
+  color: #000;
+}
+
+.wrapper{
+  width: 100%;
+  margin: 0 auto;
+}
+
+main{
+  display: block;
+  background-color: #FFF;
+}
+
+.container{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section.module p{
+  margin-bottom: 40px;
+}
+
+section.module:last-child{
+  margin-bottom: 0;
+}
+
+section.module h2{
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+section.module.content{
+ padding: 40px 0;
+ background: #5c4f7c4b; /* muda a cor de fundo dos textos*/
+}
+
+section.module.parallax{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh !important;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+section.module.parallax:after{
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 8;
+  background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100% );
+  background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100% );
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100% );
+}
+
+
+section.module.parallax-1{
+  background-image: url('imagens/img1.jpg');
+}
+
+section.module.parallax-2{
+  background-image: url('imagens/img5.jpg');
+}
+
+section.module.parallax-3{
+  background-image: url('imagens/img16.jpg');
+}
+
+
+section.module.parallax h1{
+  color: #FFF;
+  text-align: center;
+  font-size: 78px;
+  z-index: 50;
+  text-transform: uppercase;
+}
+
+
+.icone {
+  display: inline-block;
+  vertical-align: middle; /* Para alinhar verticalmente com o texto */
+  margin-right: 5px; 
+  position: relative;
+  top: 2px;
+}
+
+/* WHASTSAPP*/
+.contact {
+  display: inline-block;
+  position: relative;
+  font-size: 1rem;
+  color: #666666;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  margin-left: -5px;
+}
+
+.animate-number {
+  display: inline-block;
+  color: #666666;
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.animate-number:hover {
+  transform: scale(1.1); /* Aumenta bem pouco o tamanho */
+  color: #128C7E; /* Cor mais escura ao passar o mouse */
+}
+/* WHATS- ACABA AQUI*/
+
+      /* Seção de contato e mapa */
+
+.contato-seçao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: none;
+  padding: 40px 20px;
+  margin-top: 50px;
+  border-radius:0px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+/* Texto à esquerda */
+.contato-info {
+  flex: 1;
+  text-align: left;
+  padding-right: 20px;
+}
+
+.contato-info h2 {
+  color: #5c4f7c;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contato-info p {
+  font-size: 1rem;
+  color: #666666;
+  margin: 5px 0;
+}
+
+.contato-info .horario {
+  margin-left: 29px;
+}
+.contato-info .icone {
+  top: 0.2px;
+}
+
+/* Mapa à direita */
+.map-container {
+  flex: 1;
+  text-align: right;
+}
+
+.map-container iframe {
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+}
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: #273d40;
+  color: #fff;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+
+@media all and (max-width: 820px) {
+  
+  section.module h2 {
+    font-size: 32px;
+  }
+  .module h2, p{
+    padding: 0 8px;
+  }
+
+  .container{
+    margin:0;
+    padding:0;
+  }
+
+  section.module.parallax h1 {
+    font-size: 36px;
+  }
+}
+/* RESPONSIVO PARA TABLET */
+@media (min-width: 500px) and (max-width: 1200px){
+  .burguer {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: block;
+    cursor: pointer;
+    z-index: 1001;
+    
+  }
+  
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    clip-path: circle(100px at -10% -10%);
+    transition: 1s ease-out;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 0;
+    gap: 0;
+    pointer-events: none;
+  }
+  
+  /* Menu hambúrguer */
+.nav-list {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('imagens/img20.jpg') no-repeat center center !important; /* Altere para a imagem desejada */
+  background-size: cover !important; /* Ajusta a imagem para cobrir toda a área */
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 0;
+}
+
+/* Estilo dos botões do menu */
+.nav-list .btn, .log-botao .Log {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 10px 0;
+  opacity: 0;  /* Inicialmente invisível */
+  transition: 0.5s ease, 0.5s ease;  /* Transições para opacidade e transformação */
+  transform: translateY(20px);  /* Botões começam abaixo e vai para o topo */
+}
+
+/* Botões aparecem um por um com delay */
+.navbar.active .nav-left .btn:nth-child(1){
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.navbar.active .nav-left .btn:nth-child(2){
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.navbar.active .nav-left .btn:nth-child(3){
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+
+.navbar.active .nav-right .btn:nth-child(1){
+  opacity: 1;
+  transform: translateY(0);  
+  transition-delay: 0.8s;
+}
+
+.navbar.active .nav-right .btn:nth-child(2){
+  opacity: 1;
+  transform: translateY(0);  
+  transition-delay: 1s;
+}
+
+.navbar.active .nav-right .btn:nth-child(3){
+  opacity: 1;
+  transform: translateY(0); 
+  transition-delay: 1.2s;
+}
+
+
+  /* ESTILOS ATIVOS */
+  .navbar.active .nav-list {
+    clip-path: circle(1500px at 50% 50%);
+  pointer-events: all;
+  
+
+  }
+
+  .navbar.active .nav-list button {
+    opacity: 1;
+  }
+
+
+  .nav-left, .nav-right{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -1px;
+  }
+
+  .nav-left, .nav-right {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    margin-top: 160px;
+  }
+
+  .nav-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+    align-items: center; 
+    justify-content: center; 
+    margin-top: 20px; 
+  }
+
+  .log-botao button {
+    margin-top: 10px; 
+  }
+
+  .log-botao {
+    margin-left:0px;
+    margin-top: 100px;
+  }
+
+  .logo img {
+    display: none;
+  }
+
+/* Botão de Login com atraso tbm */
+.navbar.active .log-botao .Log {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.4s;
+  
+}
+.btn {
+  background-color: #fcfcfc49;
+  border-radius: 20px;
+}
+
+.contato-seçao {
+  box-shadow: none;
+}
+}
+
+/* RESPONSIVO CELULAR */
+
+@media (min-width: 350px) and (max-width: 499px){
+  .burguer {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: block;
+    cursor: pointer;
+    z-index: 1001;
+    
+  }
+  
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    clip-path: circle(100px at -20% -20%);
+    transition: 1s ease-out;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 0;
+    gap: 0;
+    pointer-events: none;
+  }
+  
+  /* Menu hambúrguer */
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('imagens/img20.jpg') no-repeat center center !important; /* Altere para a imagem desejada */
+    background-size: cover !important; /* Ajusta a imagem para cobrir toda a área */
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 0;
+    overflow-y: auto;
+    transition: 1s ease-out;
+  }
+
+/* Estilo dos botões do menu */
+.nav-list .btn, .log-botao .Log {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 10px 0;
+  opacity: 0;  /* Inicialmente invisível */
+  transition: 0.5s ease, 0.5s ease;  /* Transições para opacidade e transformação */
+  transform: translateY(20px);  /* Botões começam abaixo e vai para o topo */
+}
+
+/* Botões aparecem um por um com delay */
+.navbar.active .nav-left .btn:nth-child(1){
+  opacity: 1;
+  transform: translateY(0);  /* Move o botão para cima */
+  transition-delay: 0.2s;
+}
+
+.navbar.active .nav-left .btn:nth-child(2){
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.navbar.active .nav-left .btn:nth-child(3){
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+
+.navbar.active .nav-right .btn:nth-child(1){
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s;
+}
+
+.navbar.active .nav-right .btn:nth-child(2){
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1s;
+}
+
+.navbar.active .nav-right .btn:nth-child(3){
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.2s;
+}
+
+
+  /* ESTILOS ATIVOS */
+  .navbar.active .nav-list {
+    clip-path: circle(1500px at 50% 50%);
+  pointer-events: all;
+  
+
+  }
+
+  .navbar.active .nav-list button {
+    opacity: 1;
+  }
+
+
+  .nav-left, .nav-right{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -5px;
+  }
+
+  .nav-left, .nav-right {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    margin-top: 160px;
+  }
+
+  .nav-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+    align-items: center; 
+    justify-content: center; 
+    margin-top: 20px; 
+  }
+
+  .log-botao button {
+    margin-top: 10px; 
+  }
+
+
+  .log-botao {
+    margin-left:0px;
+    margin-top: 100px;
+  }
+
+  .logo img {
+    display: none;
+  }
+
+/* Botão de Login com atraso tbm */
+.navbar.active .log-botao .Log {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.4s;
+  
+}
+
+.btn {
+  background-color: #fcfcfc49;
+  border-radius: 20px;
+}
+
+/* Ajuste do layout da seção de contato */
+.contato-seçao {
+  flex-direction: column; 
+  box-shadow: none;
+}
+
+.contato-info {
+  
+  margin-bottom: 20px; /* Espaço abaixo do texto */
+}
+
+.map-container {
+  text-align: center;
+}
+
+.map-container iframe {
+  width: 100%; 
+  max-width: 400px; 
+  height: 250px; 
+
+}
+
+}
+
+
+
+
+

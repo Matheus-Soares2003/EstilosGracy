@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #2f2841;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza vrticalmente */
+    height: 100vh; /* Ocupa toda a altura da janela */
+    margin: 0; /* Remove margens padrão do body */
+    
+}
+
+.titulo {
+    position: absolute; /* Para posicionar no canto da página */
+    top: 20px; /* Distancia do topo */
+    left: 215px; /* Distancia da esquerda */
+    font-size: 1.8vw; /* Ajuste o tamanho da fonte */
+    color: #8725f7; /* Cor do texto */
+    
+}
+
+.login-img{
+    width:32vw;
+    margin-top: 60px;
+}
+
+.paginaLogin {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 0px; /*preenchimento dos lados (login) */
+    border-radius: 7px; /* Bordas arredondadas */
+    margin-left: 20%;
+}
+
+.FormLogin {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 30px 35px;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    gap: 5px;
+}
+
+.cor-login{
+    color:#8725f7
+}
+
+.FormLogin img {
+    width: px;
+}
+
+.links {
+    display: flex;
+    flex-direction:row; /* links lado a lado */
+    justify-content: space-between; /*Espaça os links */
+    gap: 10px; /* Espaçamento entre os links */
+}
+
+.FormLogin h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 2.3em;
+}
+
+.FormLogin p {
+    display: inline-block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.FormLogin input {
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    outline: none;
+}
+
+.FormLogin input:focus {
+    border: 1px solid #8725f7;
+}
+
+.FormLogin label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.FormLogin a {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #480ca8;
+    transition: all linear 160ms;
+    text-decoration: none; /*Remove o sublinhado dos links*/
+}
+
+.FormLogin a:hover {
+    color: #6722d4;
+}
+
+.btn {
+    background-color:#8725f7;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;
+    text-transform: uppercase;
+    box-shadow: 0px 10px 40px -12px #530ea3;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #5b05bd;
+}
+
+/* Adaptando para tablets */
+@media (min-width: 481px) and (max-width: 1300px) {
+    .titulo {
+        display: none;
+    }
+
+    body{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paginaLogin {
+        width: 50%; 
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .cad-img {
+        width: 30vw; /* tamanho da imagem  */
+        margin-top: 20px;
+    }
+}
+
+/* Adaptando para Celulares */
+@media (max-width: 480px) {
+    .titulo {
+        display: none;
+    }
+
+    body{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paginaLogin {
+        width: 80%; /* Quase toda a largura da tela no celular */
+        margin-left: 0;
+        padding: 5px;
+    }
+
+    .FormLogin {
+        padding: 20px;
+    }
+
+    .login-img {
+        width: 60vw; /* Reduz a largura da imagem para caber melhor no celular */
+        margin-top: 20px;
+    }
+}
